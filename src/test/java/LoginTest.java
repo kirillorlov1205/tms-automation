@@ -28,7 +28,7 @@ public class LoginTest {
     }
 
     @AfterSuite
-    public void afterClass() {
+    public void afterSuite() {
         driver.close();
     }
 
@@ -61,5 +61,4 @@ public class LoginTest {
         driver.findElement(LOGIN_BUTTON_LOCATOR).click();
         Assert.assertEquals(driver.findElement(INVALID_CREDENTIALS_VALIDATION_LOCATOR).getText(), INVALID_CREDENTIALS_VALIDATION_MESSAGE);
     }
-
 }
